@@ -1,0 +1,42 @@
+{
+  "title": "Microsoft Teams Whitelist",
+  "description": "A set of rules to whitelist Microsoft Teams and its necessary domains.",
+  "rules": [
+    {
+      "action": "allow",
+      "process": "/Applications/Microsoft Teams.app/Contents/MacOS/Teams",
+      "owner": {
+        "identifier": "com.microsoft.teams",
+        "type": "bundleID"
+      },
+      "comment": "Allow Microsoft Teams app to access the internet"
+    },
+    {
+      "action": "allow",
+      "process": "/Applications/Microsoft Teams.app/Contents/MacOS/Teams",
+      "remote-domains": [
+        "teams.microsoft.com",
+        "login.microsoftonline.com",
+        "teams.microsoft.us",
+        "admin.teams.microsoft.com",
+        "prod.ms-identity-broker.cloudapp.net"
+      ],
+      "port": "any",
+      "comment": "Allow Microsoft Teams app to access necessary domains"
+    },
+    {
+      "action": "allow",
+      "process": "/Applications/Microsoft Teams.app/Contents/MacOS/Teams",
+      "remote-addresses": [
+        "13.107.6.0/24",
+        "13.107.7.0/24",
+        "13.107.18.0/24",
+        "13.107.19.0/24",
+        "13.107.60.0/24",
+        "13.107.61.0/24"
+      ],
+      "port": "any",
+      "comment": "Allow Microsoft Teams app to access necessary IP addresses"
+    }
+  ]
+}
