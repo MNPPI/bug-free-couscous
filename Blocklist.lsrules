@@ -1,0 +1,90 @@
+{
+  "description" : "Denied connections - last updated 2021-07-11",
+  "name" : "Blocklist - Denials",
+  "rules" : [
+    {
+      "action" : "deny",
+      "owner" : "me",
+      "process" : "any",
+      "remote-hosts" : [
+        "dr-sec-s03.hcmc.co.hennepin.mn.us",
+        "mcd-sec-s01.hcmc.co.hennepin.mn.us",
+        "mcd-sec-s02.hcmc.co.hennepin.mn.us"
+      ],
+      "notes" : "Security/Interrogation servers from HCMC.  Don't trust all these guys at all ;)"
+    },
+    {
+      "action" : "deny",
+      "owner" : "me",
+      "process" : "any",
+      "remote-hosts" : [
+        "sstats.adobe.com",
+        "adobe.demdex.net"
+      ],
+      "notes" : "Adobe Telemetry and Analytics"
+    },
+    {
+      "action" : "deny",
+      "owner" : "me",
+      "process" : "any",
+      "remote-domains" : [
+        "events.data.microsoft.com",
+        "hockeyapp.net",
+        "pipe.aria.microsoft.com"
+      ],
+      "notes" : "Microsoft Telemetry and Analytics"
+    },
+    {
+      "action" : "deny",
+      "owner" : "me",
+      "process" : "any",
+      "remote-domains" : [
+        "crashlytics.com"
+      ],
+      "notes" : "Crashlytics"
+    },
+    {
+      "action" : "deny",
+      "owner" : "me",
+      "process" : "/Applications/Utilities/Adobe Sync/CoreSync/Core Sync.app/Contents/MacOS/Core Sync",
+      "remote" : "any",
+      "notes" : "Adobe Core Sync to Creative Cloud 2021-07-11"
+    },
+    {
+      "action" : "deny",
+      "owner" : "me",
+      "process" : "/Applications/Battery Health 2.app/Contents/MacOS/Battery Health 2",
+      "remote-domains" : [
+        "getclicky.com"
+      ],
+      "notes" : "Battery Health 2 Analytics Server 2021-07-11"
+    },
+    {
+      "action" : "deny",
+      "owner" : "me",
+      "process" : "/Applications/Mattermost.app/Contents/MacOS/Mattermost",
+      "remote-domains" : [
+        "pdat.matterlytics.com"
+      ],
+      "notes" : "Mattermost Analytics Server 2021-07-11"
+    },
+    {
+      "action" : "deny",
+      "owner" : "me",
+      "process" : "/System/Applications/News.app/Contents/MacOS/News",
+      "remote-hosts" : [
+        "apple.comscoreresearch.com",
+        "iadctest.qwapi.com"
+      ],
+      "notes" : "News - Analytics Functions 2021-07-11"
+    },
+    {
+      "action" : "deny",
+      "owner" : "me",
+      "ports" : "50001-50004",
+      "process" : "/Applications/Discord.app/Contents/MacOS/Discord",
+      "protocol" : "udp",
+      "remote" : "any"
+    }
+  ]
+}

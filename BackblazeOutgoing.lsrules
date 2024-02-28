@@ -1,0 +1,215 @@
+{
+  "name": "Backup and Sync",
+  "description": "Backblaze, Backblaze B2, ARQ, Resilio, etc. Outgoing Connections.  Last updated 2020-08-14",
+  "rules": [
+    {
+      "action": "allow",
+      "creationDate": 1572229517.911953,
+      "modificationDate": 1572229517.911953,
+      "owner": "system",
+      "ports": "443",
+      "process": "/Applications/Backblaze.app/Contents/MacOS/bzserv",
+      "remote-domains": [
+        "backblaze.com",
+        "backblazeb2.com"
+      ]
+    },
+    {
+      "action": "allow",
+      "creationDate": 1573438775.421313,
+      "modificationDate": 1573438775.421313,
+      "owner": "me",
+      "ports": "443",
+      "process": "/Library/Backblaze.bzpkg/bzbmenu.app/Contents/MacOS/bzbmenu",
+      "remote-hosts": "ca000.backblaze.com"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1571000875.4027371,
+      "modificationDate": 1571000875.4027371,
+      "owner": "system",
+      "ports": "443",
+      "process": "/Library/Backblaze.bzpkg/bztransmit",
+      "remote-domains": [
+        "backblaze.com",
+        "backblazeb2.com"
+      ]
+    },
+    {
+      "action": "allow",
+      "creationDate": 1571000891.887706,
+      "modificationDate": 1571000891.887706,
+      "owner": "system",
+      "ports": "443",
+      "process": "/Library/Backblaze.bzpkg/bztrans_thread00",
+      "remote-domains": "backblaze.com"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1571000897.658848,
+      "modificationDate": 1571000897.658848,
+      "owner": "system",
+      "ports": "443",
+      "process": "/Library/Backblaze.bzpkg/bztrans_thread01",
+      "remote-domains": "backblaze.com"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1571000899.9534888,
+      "modificationDate": 1571000899.9534888,
+      "owner": "system",
+      "ports": "443",
+      "process": "/Library/Backblaze.bzpkg/bztrans_thread02",
+      "remote-domains": "backblaze.com"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1571000900.971452,
+      "modificationDate": 1571000900.971452,
+      "owner": "system",
+      "ports": "443",
+      "process": "/Library/Backblaze.bzpkg/bztrans_thread03",
+      "remote-domains": "backblaze.com"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1571003531.511579,
+      "modificationDate": 1571003531.511579,
+      "owner": "system",
+      "ports": "443",
+      "process": "/Library/Backblaze.bzpkg/bztrans_thread04",
+      "remote-domains": "backblaze.com"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1571003534.118814,
+      "modificationDate": 1571003534.118814,
+      "owner": "system",
+      "ports": "443",
+      "process": "/Library/Backblaze.bzpkg/bztrans_thread05",
+      "remote-domains": "backblaze.com"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1592428426.8655372,
+      "modificationDate": 1592428426.8655372,
+      "owner": "me",
+      "ports": "443",
+      "process": "/Users/mark/Applications/Cyberduck.app/Contents/MacOS/Cyberduck",
+      "protocol": "tcp",
+      "remote-hosts": [
+        "api000.backblazeb2.com",
+        "api.backblazeb2.com",
+        "f000.backblazeb2.com"
+      ]
+    },
+    {
+      "action": "allow",
+      "creationDate": 1592497135.4344149,
+      "modificationDate": 1592497135.4344149,
+      "owner": "system",
+      "ports": "443",
+      "process": "/Library/Little Snitch/Little Snitch Daemon.bundle/Contents/XPCServices/Little Snitch URL Downloader.xpc/Contents/MacOS/Little Snitch URL Downloader",
+      "remote-hosts": "f000.backblazeb2.com"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1593008573.177032,
+      "modificationDate": 1593008573.177032,
+      "owner": "system",
+      "ports": "443",
+      "process": "/Applications/Arq.app/Contents/Resources/ArqAgent.app/Contents/MacOS/ArqAgent",
+      "protocol": "tcp",
+      "remote-hosts": [
+        "api.backblazeb2.com",
+        "api000.backblazeb2.com",
+        "f000.backblazeb2.com",
+        "www.arqbackup.com"
+      ]
+    },
+    {
+      "action": "allow",
+      "creationDate": 1593010437.77437,
+      "modificationDate": 1593010437.77437,
+      "owner": "system",
+      "ports": "587",
+      "process": "/Applications/Arq.app/Contents/Resources/ArqAgent.app/Contents/MacOS/ArqAgent",
+      "protocol": "tcp",
+      "remote-hosts": "smtp.comcast.net"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1593010571.871952,
+      "modificationDate": 1593010571.871952,
+      "owner": "system",
+      "ports": "443",
+      "process": "/Applications/Arq.app/Contents/Resources/ArqAgent.app/Contents/MacOS/ArqAgent",
+      "protocol": "tcp",
+      "remote-domains": "backblaze.com"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1593010571.871952,
+      "modificationDate": 1593010571.871952,
+      "owner": "system",
+      "process": "/Users/mark/Applications/Resilio Sync.app/Contents/MacOS/Resilio Sync",
+      "protocol": "tcp",
+      "ports": "3000",
+      "remote-addresses": "2604:4500:3:80::10, 66.206.5.74"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1593010571.871952,
+      "modificationDate": 1593010571.871952,
+      "owner": "system",
+      "process": "/Users/mark/Applications/Resilio Sync.app/Contents/MacOS/Resilio Sync",
+      "protocol": "udp",
+      "ports": "3001",
+      "remote-addresses": "10.22.255.182"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1593010571.871952,
+      "modificationDate": 1593010571.871952,
+      "owner": "system",
+      "process": "/Users/mark/Applications/Resilio Sync.app/Contents/MacOS/Resilio Sync",
+      "protocol": "udp",
+      "ports": "4000",
+      "remote-addresses": "23.111.157.86, 66.165.233.194"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1593010571.871952,
+      "modificationDate": 1593010571.871952,
+      "owner": "me",
+      "process": "/Users/mark/Applications/Resilio Sync.app/Contents/MacOS/Resilio Sync",
+      "protocol": "tcp",
+      "ports": "443",
+      "remote-hosts": [
+        "config.resilio.com",
+        "license.resilio.com",
+        "update.resilio.com"
+      ]
+    },
+    {
+      "action": "allow",
+      "creationDate": 1593010571.871952,
+      "modificationDate": 1593010571.871952,
+      "owner": "me",
+      "process": "/Users/mark/Applications/Resilio Sync.app/Contents/MacOS/Resilio Sync",
+      "protocol": "tcp",
+      "ports": "32132",
+      "remote-addresses": "207.191.156.202, 2607:fb90:995c:b9a7:440:57e9:fd89:f8a1, 2607:fb90:995c:b9a7:8d0:5ad4:991:3e4a, 2607:fb90:995c:b9a7:186e:3ea8:785a:2a69, 2607:fb90:995c:b9a7:64ae:a142:a34d:3d54, 2607:fc20:4703:1041:3e91:a8db:6b0e:c088, fd74:6572:6d6e:7573:c:cf72:3da5:d558, fd74:6572:6d6e:7573:d:cf72:3da5:d558"
+    },
+    {
+      "action": "allow",
+      "creationDate": 1593010571.871952,
+      "modificationDate": 1593010571.871952,
+      "owner": "me",
+      "process": "/Users/mark/Applications/Resilio Sync.app/Contents/MacOS/Resilio Sync",
+      "protocol": "udp",
+      "ports": "32132",
+      "remote-addresses": "207.191.156.202, 2607:fb90:995c:b9a7:440:57e9:fd89:f8a1, 2607:fb90:995c:b9a7:8d0:5ad4:991:3e4a, 2607:fb90:995c:b9a7:186e:3ea8:785a:2a69, 2607:fb90:995c:b9a7:64ae:a142:a34d:3d54, 2607:fc20:4703:1041:3e91:a8db:6b0e:c088, fd74:6572:6d6e:7573:c:cf72:3da5:d558, fd74:6572:6d6e:7573:d:cf72:3da5:d558"
+    }
+  ]
+}
